@@ -1,5 +1,4 @@
 import 'package:bank_sha/shared/theme.dart';
-import 'package:bank_sha/ui/pages/sign_in_page.dart';
 import 'package:bank_sha/ui/widgets/buttons.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -92,7 +91,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   ),
                   Text(
                     subTitles[currentIndex],
-                    style: greenTextStyle.copyWith(
+                    style: greyTextStyle.copyWith(
                       fontSize: 16,
                     ),
                     textAlign: TextAlign.center,
@@ -105,36 +104,21 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           children: [
                             CustomFilledButton(
                               title: 'Get Started',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamedAndRemoveUntil(
+                                    context, '/sign-up', (route) => false);
+                              },
                             ),
                             const SizedBox(
                               height: 20,
                             ),
-                            SizedBox(
-                              width: double.infinity,
-                              height: 50,
-                              child: TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const SignInPage()));
-                                },
-                                style: TextButton.styleFrom(
-                                  padding: EdgeInsets.zero,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(56),
-                                  ),
-                                ),
-                                child: Text(
-                                  'Sign In',
-                                  style: greyTextStyle.copyWith(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                              ),
-                            ),
+                            CustomTextButton(
+                              title: 'Sign In',
+                              onPressed: () {
+                                Navigator.pushNamedAndRemoveUntil(
+                                    context, '/sign-in', (route) => false);
+                              },
+                            )
                           ],
                         )
                       : Row(
