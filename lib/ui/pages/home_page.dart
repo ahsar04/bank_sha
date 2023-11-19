@@ -1,6 +1,8 @@
 import 'package:bank_sha/shared/theme.dart';
 import 'package:bank_sha/ui/widgets/home_lates_transactions_item.dart';
 import 'package:bank_sha/ui/widgets/home_service_item.dart';
+import 'package:bank_sha/ui/widgets/home_tips_item.dart';
+import 'package:bank_sha/ui/widgets/home_user_item.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -82,6 +84,8 @@ class HomePage extends StatelessWidget {
           buildLevel(),
           buildServices(),
           buildLatesTransactions(),
+          buildSendAgain(),
+          buildFriendlyTips()
         ],
       ),
     );
@@ -366,6 +370,99 @@ Widget buildLatesTransactions() {
             ],
           ),
         ),
+      ],
+    ),
+  );
+}
+
+Widget buildSendAgain() {
+  return Container(
+    margin: const EdgeInsets.only(
+      top: 30,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Send Again',
+          style: blackTextStyle.copyWith(
+            fontSize: 16,
+            fontWeight: semiBold,
+          ),
+        ),
+        const SizedBox(
+          height: 14,
+        ),
+        const SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              HomeUserItem(
+                imageUrl: "assets/images/img_friend_1.png",
+                username: "Yuanita",
+              ),
+              HomeUserItem(
+                imageUrl: "assets/images/img_friend_2.png",
+                username: "Jani",
+              ),
+              HomeUserItem(
+                imageUrl: "assets/images/img_friend_3.png",
+                username: "Urim",
+              ),
+              HomeUserItem(
+                imageUrl: "assets/images/img_friend_4.png",
+                username: "Masa",
+              ),
+            ],
+          ),
+        )
+      ],
+    ),
+  );
+}
+
+Widget buildFriendlyTips() {
+  return Container(
+    margin: const EdgeInsets.only(
+      top: 30,
+      bottom: 50,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Friendly Tips",
+          style: blackTextStyle.copyWith(fontWeight: semiBold, fontSize: 15),
+        ),
+        const SizedBox(
+          height: 14,
+        ),
+        const Wrap(
+          spacing: 17,
+          runSpacing: 18,
+          children: [
+            HomeTipsItem(
+              imageUrl: "assets/images/img_tips_1.png",
+              title: "Best tips for using a credit card ",
+              url: "https://www.google.com",
+            ),
+            HomeTipsItem(
+              imageUrl: "assets/images/img_tips_2.png",
+              title: "Spot the good pie of inance model",
+              url: "https://www.google.com",
+            ),
+            HomeTipsItem(
+              imageUrl: "assets/images/img_tips_3.png",
+              title: "Great hack to get better advices",
+              url: "https://www.google.com",
+            ),
+            HomeTipsItem(
+              imageUrl: "assets/images/img_tips_4.png",
+              title: "Save more penny buy this instead",
+              url: "https://www.google.com",
+            )
+          ],
+        )
       ],
     ),
   );

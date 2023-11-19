@@ -34,7 +34,7 @@ class CustomFormField extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(14),
             ),
-            contentPadding: EdgeInsets.all(12),
+            contentPadding: const EdgeInsets.all(12),
           ),
         ),
       ],
