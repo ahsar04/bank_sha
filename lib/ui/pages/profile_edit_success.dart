@@ -37,7 +37,7 @@ class ProfileEditSucces extends StatelessWidget {
               title: "My Profile",
               width: 190,
               onPressed: () {
-                Navigator.pushNamed(context, "/profile");
+                Navigator.pushNamed(context, "/home");
               },
             ),
           ],
