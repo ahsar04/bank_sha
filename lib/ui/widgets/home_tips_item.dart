@@ -7,11 +7,11 @@ class HomeTipsItem extends StatelessWidget {
   final String url;
 
   const HomeTipsItem({
-    Key? key,
+    super.key,
     required this.imageUrl,
     required this.title,
     required this.url,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

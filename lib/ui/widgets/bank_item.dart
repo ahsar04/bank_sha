@@ -6,11 +6,11 @@ class BankItem extends StatelessWidget {
   final String imageUrl;
   final bool? isSelected;
   const BankItem({
-    Key? key,
+    super.key,
     required this.title,
     required this.imageUrl,
     this.isSelected = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
