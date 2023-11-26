@@ -32,6 +32,9 @@ class HomeServiceItem extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            height: 8,
+          ),
           Text(
             title,
             style: blackTextStyle.copyWith(
