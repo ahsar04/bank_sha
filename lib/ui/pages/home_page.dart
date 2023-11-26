@@ -1,3 +1,4 @@
+import 'package:bank_sha/shared/shered_methods.dart';
 import 'package:bank_sha/shared/theme.dart';
 import 'package:bank_sha/ui/widgets/home_lates_transactions_item.dart';
 import 'package:bank_sha/ui/widgets/home_service_item.dart';
@@ -204,7 +205,7 @@ Widget buildWalletCard() {
           style: whiteTextStyle,
         ),
         Text(
-          'Rp 12.500',
+          formatCurency(50000),
           style: whiteTextStyle.copyWith(
             fontSize: 24,
             fontWeight: semiBold,
@@ -243,7 +244,7 @@ Widget buildLevel() {
               ),
             ),
             Text(
-              'of Rp 20.000',
+              'of ${formatCurency(22000)}',
               style: blackTextStyle.copyWith(
                 fontWeight: semiBold,
               ),
@@ -348,37 +349,37 @@ Widget buildLatesTransactions() {
             borderRadius: BorderRadius.circular(20),
             color: whiteColor,
           ),
-          child: const Column(
+          child: Column(
             children: [
               HomeLatesTransactionsItem(
                 iconUrl: 'assets/icons/ic_transaction_category_1.png',
                 title: 'Top Up',
                 time: 'Yesterday',
-                value: '+ 450.000',
+                value: formatCurency(450000, symbol: "+ "),
               ),
               HomeLatesTransactionsItem(
                 iconUrl: 'assets/icons/ic_transaction_category_2.png',
                 title: 'Cashback',
                 time: 'Sep 11',
-                value: '+ 22.000',
+                value: formatCurency(22000, symbol: "+ "),
               ),
               HomeLatesTransactionsItem(
                 iconUrl: 'assets/icons/ic_transaction_category_3.png',
                 title: 'Withdraw',
                 time: 'Sep 2',
-                value: '+ 5.000',
+                value: formatCurency(5000, symbol: "- "),
               ),
               HomeLatesTransactionsItem(
                 iconUrl: 'assets/icons/ic_transaction_category_4.png',
                 title: 'Transfer',
                 time: 'Aug 27',
-                value: '+ 123.500',
+                value: formatCurency(123500, symbol: "- "),
               ),
               HomeLatesTransactionsItem(
                 iconUrl: 'assets/icons/ic_transaction_category_5.png',
                 title: 'Electric',
                 time: 'Feb 18',
-                value: '+ 1.230.000',
+                value: formatCurency(123000, symbol: "- "),
               ),
             ],
           ),
