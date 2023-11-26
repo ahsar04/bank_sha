@@ -298,7 +298,9 @@ Widget buildServices(BuildContext context) {
             HomeServiceItem(
               iconUrl: 'assets/icons/ic_send.png',
               title: 'Send',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, "/transfer");
+              },
             ),
             HomeServiceItem(
               iconUrl: 'assets/icons/ic_withdraw.png',
@@ -308,7 +310,12 @@ Widget buildServices(BuildContext context) {
             HomeServiceItem(
               iconUrl: 'assets/icons/ic_more.png',
               title: 'More',
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => const MoreDialog(),
+                );
+              },
             ),
           ],
         )
@@ -472,4 +479,79 @@ Widget buildFriendlyTips() {
       ],
     ),
   );
+}
+
+class MoreDialog extends StatelessWidget {
+  const MoreDialog({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      backgroundColor: Colors.transparent,
+      insetPadding: EdgeInsets.zero,
+      alignment: Alignment.bottomCenter,
+      content: Container(
+        height: 326,
+        padding: const EdgeInsets.all(30),
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: lightBackgroundColor,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Do More With Us",
+              style: blackTextStyle.copyWith(
+                fontWeight: semiBold,
+                fontSize: 16,
+              ),
+            ),
+            const SizedBox(
+              height: 13,
+            ),
+            Wrap(
+              spacing: 29,
+              runSpacing: 29,
+              children: [
+                HomeServiceItem(
+                  iconUrl: 'assets/icons/ic_product_data.png',
+                  title: 'Data',
+                  onTap: () {
+                    Navigator.pushNamed(context, "/data-provider");
+                  },
+                ),
+                HomeServiceItem(
+                  iconUrl: 'assets/icons/ic_product_water.png',
+                  title: 'Water',
+                  onTap: () {},
+                ),
+                HomeServiceItem(
+                  iconUrl: 'assets/icons/ic_product_stream.png',
+                  title: 'Stream',
+                  onTap: () {},
+                ),
+                HomeServiceItem(
+                  iconUrl: 'assets/icons/ic_product_movie.png',
+                  title: 'Movie',
+                  onTap: () {},
+                ),
+                HomeServiceItem(
+                  iconUrl: 'assets/icons/ic_product_food.png',
+                  title: 'Food',
+                  onTap: () {},
+                ),
+                HomeServiceItem(
+                  iconUrl: 'assets/icons/ic_product_travel.png',
+                  title: 'Travel',
+                  onTap: () {},
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
 }
