@@ -1,5 +1,5 @@
 import 'package:bank_sha/shared/theme.dart';
-import 'package:bank_sha/ui/pages/data_Package_page.dart';
+import 'package:bank_sha/ui/pages/data_package_page.dart';
 import 'package:bank_sha/ui/pages/data_provider_page.dart';
 import 'package:bank_sha/ui/pages/data_success.dart';
 import 'package:bank_sha/ui/pages/home_page.dart';
