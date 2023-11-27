@@ -108,10 +108,10 @@ Widget buildResultUser() {
         const SizedBox(
           height: 14,
         ),
-        Wrap(
+        const Wrap(
           spacing: 17,
           runSpacing: 17,
-          children: const [
+          children: [
             TransferResultUserItem(
               imageUrl: "assets/images/img_friend_1.png",
               name: "Yonna Jie",

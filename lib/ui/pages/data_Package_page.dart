@@ -3,7 +3,6 @@ import 'package:bank_sha/ui/widgets/buttons.dart';
 import 'package:bank_sha/ui/widgets/form.dart';
 import 'package:bank_sha/ui/widgets/package_item.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class DataPackagePage extends StatelessWidget {
   const DataPackagePage({super.key});
