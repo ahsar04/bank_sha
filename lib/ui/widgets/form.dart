@@ -5,6 +5,7 @@ class CustomFormField extends StatelessWidget {
   final String title;
   final bool obscureText;
   final bool isShowTitle;
+  final bool isvalidator;
   final TextEditingController? controller;
 
   const CustomFormField({
@@ -12,8 +13,21 @@ class CustomFormField extends StatelessWidget {
     required this.title,
     this.obscureText = false,
     this.isShowTitle = true,
+    this.isvalidator = false,
     this.controller,
   });
+
+// email validator
+  // bool isValidEmail(String email) {
+  //   final RegExp emailRegex = RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$');
+  //   return emailRegex.hasMatch(email);
+  // }
+// pass validator
+  // bool isValidPassword(String password) {
+  //   final RegExp passwordRegex =
+  //       RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$');
+  //   return passwordRegex.hasMatch(password);
+  // }
 
   @override
   Widget build(BuildContext context) {

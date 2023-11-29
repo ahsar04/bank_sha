@@ -3,9 +3,17 @@ import 'package:bank_sha/ui/widgets/buttons.dart';
 import 'package:bank_sha/ui/widgets/form.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
 
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  // final nameController = TextEditingController(text: "");
+  // final emailController = TextEditingController(text: "");
+  // final passwordController = TextEditingController(text: "");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +57,9 @@ class SignInPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // NOTE: Email Input
-                const CustomFormField(title: 'Email Address'),
+                const CustomFormField(
+                  title: 'Email Address',
+                ),
                 const SizedBox(
                   height: 16,
                 ),
