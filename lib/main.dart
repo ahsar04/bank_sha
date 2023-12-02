@@ -60,7 +60,6 @@ class MyApp extends StatelessWidget {
           '/sign-in': (context) => const SignInPage(),
           '/sign-up': (context) => const SignUpPage(),
           '/sign-up-set-profile': (context) => const SignUpUploadProfilePage(),
-          '/sign-up-set-ktp': (context) => const SignUpUploadKtpPage(),
           '/sign-up-success': (context) => const SignUpSuccessPage(),
           '/home': (context) => const HomePage(),
           '/profile': (context) => const ProfilePage(),
